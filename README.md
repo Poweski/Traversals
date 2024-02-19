@@ -1,6 +1,6 @@
 # Traversals
-Sixth assignment for algorithms and data structures exercises.
 
-Zaprezentuj przebieg algorytmu przeglądu najpierw-wszerz (BFS) oraz najpierw-w-głąb (DFS) i podaj kolejność
-odwiedzania wierzchołków. W momencie wybierania kolejnego wierzchołka do
-zwizytowania użyj kolejności leksykalnej.
+Sixth Algorithms and Data Structures project.
+
+- Presents the flow of the breadth-first (**BFS**) and depth-first (**DFS**) search algorithm and gives the order in which the vertices are visited.
+- When selecting the next vertex to visit, it uses lexical order.
