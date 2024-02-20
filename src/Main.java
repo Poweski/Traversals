@@ -6,11 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Tworzenie grafu
         Graph graphTraversals = new Graph();
         Graph graphForest = new Graph();
 
-        // Tworzenie wierzchołków
         Vertex va = new Vertex("a");
         Vertex vb = new Vertex("b");
         Vertex vc = new Vertex("c");
@@ -23,8 +21,6 @@ public class Main {
         Vertex vs = new Vertex("s");
         Vertex vt = new Vertex("t");
 
-
-        // Dodawanie wierzchołków do grafu
         graphTraversals.addVertex(va);
         graphTraversals.addVertex(vb);
         graphTraversals.addVertex(vc);
@@ -47,7 +43,6 @@ public class Main {
         graphForest.addVertex(vh);
         graphForest.addVertex(vi);
 
-        // Dodawanie krawędzi
         graphTraversals.addEdge(vf, vc);
         graphTraversals.addEdge(vc, vs);
         graphTraversals.addEdge(vs, va);
@@ -76,19 +71,13 @@ public class Main {
         graphForest.addEdge(vb, vc);
         graphForest.addEdge(vc, vg);
 
-        // Wierzchołek początkowy
-        Vertex startVertex = vs;
+        BFS bfs = new BFS();
+        bfs.breadthFirstSearch(graphTraversals, vs);
 
-        // Przeszukiwanie wszerz
-//        BFS bfs = new BFS();
-//        bfs.breadthFirstSearch(graphTraversals, startVertex);
-
-        // Przeszukiwanie w głąb według algorytmu z wykładu
         DFS dfs = new DFS();
-        dfs.depthFirstSearch(graphTraversals, startVertex);
+        dfs.depthFirstSearch(graphTraversals, vs);
 
-        // Znajdowanie składowych spójnych
-//        DSF dsf = new DSF();
-//        dsf.findConnectedComponents(graphForest);
+        DSF dsf = new DSF();
+        dsf.findConnectedComponents(graphForest);
     }
 }
